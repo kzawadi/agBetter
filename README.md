@@ -26,17 +26,33 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
+The site is configured to be deployed to GitHub Pages automatically using GitHub Actions.
+
+### Manual Deployment
+
+If you need to deploy manually, you can use one of these methods:
+
 Using SSH:
 
 ```bash
-USE_SSH=true yarn deploy
+USE_SSH=true npm run deploy
 ```
 
 Not using SSH:
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+GIT_USER=<Your GitHub username> npm run deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This will build the website and push it to the `gh-pages` branch of your GitHub repository.
+
+### Automatic Deployment with GitHub Actions
+
+This repository is set up with GitHub Actions workflows that will automatically deploy the site to GitHub Pages when you push to the main branch.
+
+To enable GitHub Pages:
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" section
+3. Select "GitHub Actions" as the source
+4. Push to the main branch to trigger a deployment
 # agBetter
