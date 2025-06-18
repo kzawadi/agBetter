@@ -27,6 +27,17 @@ const config: Config = {
 
   onBrokenLinks: 'warn', // Changed from 'throw' to 'warn' to allow the build to proceed
   onBrokenMarkdownLinks: 'warn',
+  
+  // Redirects to fix navigation
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        httpEquiv: 'refresh',
+        content: '0; URL=/agBetter/intro',
+      },
+    },
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
